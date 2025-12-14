@@ -16,19 +16,19 @@ export async function seedBlog(payload: Payload) {
     payload,
     __dirname,
     "blog-category-placeholder.png",
-    "Blog Category Placeholder"
+    "Blog Category Placeholder",
   );
   const authorPhoto = await seedAsset(
     payload,
     __dirname,
     "blog-author-placeholder.png",
-    "Blog Author Placeholder"
+    "Blog Author Placeholder",
   );
   const postImage = await seedAsset(
     payload,
     __dirname,
     "blog-post-placeholder.png",
-    "Blog Post Placeholder"
+    "Blog Post Placeholder",
   );
 
   // Create categories
@@ -110,7 +110,7 @@ export async function seedBlog(payload: Payload) {
           title,
           slug,
           content: createRichTextParagraphs(
-            Array.from({ length: 5 }, () => faker.lorem.paragraph())
+            Array.from({ length: 5 }, () => faker.lorem.paragraph()),
           ),
           excerpt: faker.lorem.paragraph(),
           publishedDate: faker.date.past().toISOString(),
@@ -122,8 +122,8 @@ export async function seedBlog(payload: Payload) {
               { length: faker.number.int({ min: 1, max: 3 }) },
               () => ({
                 tag: faker.word.noun(),
-              })
-            )
+              }),
+            ),
           ),
         },
       });

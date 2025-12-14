@@ -16,7 +16,7 @@ export async function seedEvents(payload: Payload) {
     payload,
     __dirname,
     "event-placeholder.png",
-    "Event Placeholder"
+    "Event Placeholder",
   );
 
   let createdEvents = 0;
@@ -26,8 +26,8 @@ export async function seedEvents(payload: Payload) {
       () =>
         new Date(
           startDate.getTime() +
-            faker.number.int({ min: 1, max: 8 }) * 60 * 60 * 1000
-        )
+            faker.number.int({ min: 1, max: 8 }) * 60 * 60 * 1000,
+        ),
     );
 
     const title = faker.lorem.sentence();

@@ -16,7 +16,7 @@ export async function seedNews(payload: Payload) {
     payload,
     __dirname,
     "news-placeholder.png",
-    "News Placeholder"
+    "News Placeholder",
   );
 
   let createdNews = 0;

@@ -16,7 +16,7 @@ export async function seedCatalog(payload: Payload) {
     payload,
     __dirname,
     "catalog-category-placeholder.png",
-    "Catalog Category Placeholder"
+    "Catalog Category Placeholder",
   );
   // Use category image as fallback if item image is missing
   const catalogItemImage =
@@ -24,7 +24,7 @@ export async function seedCatalog(payload: Payload) {
       payload,
       __dirname,
       "catalog-item-placeholder.png",
-      "Catalog Item Placeholder"
+      "Catalog Item Placeholder",
     )) || categoryImage;
 
   // Create categories (nested)
@@ -117,7 +117,7 @@ export async function seedCatalog(payload: Payload) {
           categories: assignedCategories,
           price: parseFloat(faker.commerce.price()),
           description: createRichTextParagraphs(
-            Array.from({ length: 3 }, () => faker.lorem.paragraph())
+            Array.from({ length: 3 }, () => faker.lorem.paragraph()),
           ),
           gallery: catalogItemImage ? [catalogItemImage.id] : [],
           specifications: Array.from(
@@ -125,7 +125,7 @@ export async function seedCatalog(payload: Payload) {
             () => ({
               name: faker.commerce.productMaterial(),
               value: faker.commerce.productAdjective(),
-            })
+            }),
           ),
           order: i,
         },

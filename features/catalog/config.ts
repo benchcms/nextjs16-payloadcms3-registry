@@ -1,4 +1,4 @@
-import type { Feature } from "@features/types";
+import type { Feature } from "@core/types";
 import { seedCatalog } from "./seed/catalog";
 import { CatalogCategories } from "./collections/CatalogCategories";
 import { CatalogItems } from "./collections/CatalogItems";

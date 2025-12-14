@@ -15,7 +15,7 @@ export async function seedRestaurantMenu(payload: Payload) {
     payload,
     __dirname,
     "menu-item-placeholder.png",
-    "Menu Item Placeholder"
+    "Menu Item Placeholder",
   );
 
   const categories = ["Starters", "Mains", "Desserts", "Drinks", "Specials"];
@@ -50,10 +50,10 @@ export async function seedRestaurantMenu(payload: Payload) {
                   "Vegetarian",
                   "Gluten-free",
                   "Dairy-free",
-                ])
+                ]),
               ),
               spicyLevel: faker.helpers.arrayElement(spicyLevels),
-            })
+            }),
           ),
         },
       });

@@ -1,4 +1,4 @@
-import type { Integration } from "@integrations/types";
+import type { Integration } from "@core/types";
 import i18n from "./i18n.json";
 
 const googleAnalytics: Integration = {

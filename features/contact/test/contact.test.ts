@@ -33,9 +33,7 @@ describe("Contact mutations", () => {
 
     describe("validation", () => {
       it("validates required fields", async () => {
-        const action = createContactFormAction(
-          (data) => `<p>${data.name}</p>`,
-        );
+        const action = createContactFormAction((data) => `<p>${data.name}</p>`);
         const formData = new FormData();
 
         const result = await action(initialState, formData);
@@ -61,9 +59,7 @@ describe("Contact mutations", () => {
       });
 
       it("validates name length constraints", async () => {
-        const action = createContactFormAction(
-          (data) => `<p>${data.name}</p>`,
-        );
+        const action = createContactFormAction((data) => `<p>${data.name}</p>`);
         const formData = new FormData();
         formData.append("name", "a".repeat(101)); // Exceeds 100 char limit
         formData.append("email", "test@example.com");
@@ -109,9 +105,7 @@ describe("Contact mutations", () => {
       });
 
       it("requires name field", async () => {
-        const action = createContactFormAction(
-          (data) => `<p>${data.name}</p>`,
-        );
+        const action = createContactFormAction((data) => `<p>${data.name}</p>`);
         const formData = new FormData();
         formData.append("email", "test@example.com");
         formData.append("subject", "Test");
@@ -124,9 +118,7 @@ describe("Contact mutations", () => {
       });
 
       it("requires email field", async () => {
-        const action = createContactFormAction(
-          (data) => `<p>${data.name}</p>`,
-        );
+        const action = createContactFormAction((data) => `<p>${data.name}</p>`);
         const formData = new FormData();
         formData.append("name", "John Doe");
         formData.append("subject", "Test");
@@ -139,9 +131,7 @@ describe("Contact mutations", () => {
       });
 
       it("requires subject field", async () => {
-        const action = createContactFormAction(
-          (data) => `<p>${data.name}</p>`,
-        );
+        const action = createContactFormAction((data) => `<p>${data.name}</p>`);
         const formData = new FormData();
         formData.append("name", "John Doe");
         formData.append("email", "test@example.com");
@@ -154,9 +144,7 @@ describe("Contact mutations", () => {
       });
 
       it("requires message field", async () => {
-        const action = createContactFormAction(
-          (data) => `<p>${data.name}</p>`,
-        );
+        const action = createContactFormAction((data) => `<p>${data.name}</p>`);
         const formData = new FormData();
         formData.append("name", "John Doe");
         formData.append("email", "test@example.com");
@@ -171,9 +159,7 @@ describe("Contact mutations", () => {
 
     describe("optional fields", () => {
       it("accepts optional phone field", async () => {
-        const action = createContactFormAction(
-          (data) => `<p>${data.name}</p>`,
-        );
+        const action = createContactFormAction((data) => `<p>${data.name}</p>`);
 
         const result = await action(initialState, validFormData());
 
@@ -255,9 +241,7 @@ describe("Contact mutations", () => {
 
     describe("prevState parameter", () => {
       it("accepts and processes prevState correctly", async () => {
-        const action = createContactFormAction(
-          (data) => `<p>${data.name}</p>`,
-        );
+        const action = createContactFormAction((data) => `<p>${data.name}</p>`);
         const prevState: ContactFormState = {
           success: false,
           error: "Previous error",

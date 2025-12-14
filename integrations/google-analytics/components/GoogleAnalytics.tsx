@@ -1,5 +1,5 @@
 import Script from "next/script";
-import { getIntegrations } from "@integrations/queries";
+import { getIntegrations } from "../../queries";
 
 /**
  * Google Analytics tracking scripts.

@@ -30,7 +30,7 @@ export type ContactFormData = z.infer<typeof contactFormSchema>;
 
 /**
  * State type for useActionState
- * 
+ *
  * - success: true when form submitted successfully
  * - success: false when validation or server errors occur
  * - error: form-level error message

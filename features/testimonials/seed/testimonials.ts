@@ -14,7 +14,7 @@ export async function seedTestimonials(payload: Payload) {
     payload,
     __dirname,
     "testimonial-author-placeholder.png",
-    "Testimonial Author Placeholder"
+    "Testimonial Author Placeholder",
   );
 
   let createdCount = 0;

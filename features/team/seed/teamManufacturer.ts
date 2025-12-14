@@ -15,7 +15,7 @@ export async function seedTeamManufacturer(payload: Payload) {
     payload,
     __dirname,
     "team-member-placeholder.png",
-    "Team Member Placeholder"
+    "Team Member Placeholder",
   );
 
   const departments = [
@@ -51,12 +51,12 @@ export async function seedTeamManufacturer(payload: Payload) {
               email: faker.internet.email(),
               phone: faker.phone.number(),
               linkedin: faker.helpers.maybe(
-                () => `https://linkedin.com/in/${faker.internet.username()}`
+                () => `https://linkedin.com/in/${faker.internet.username()}`,
               ),
               twitter: faker.helpers.maybe(
-                () => `https://twitter.com/${faker.internet.username()}`
+                () => `https://twitter.com/${faker.internet.username()}`,
               ),
-            })
+            }),
           ),
         },
       });
