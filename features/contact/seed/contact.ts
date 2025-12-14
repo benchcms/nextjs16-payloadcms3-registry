@@ -8,8 +8,6 @@ export async function seedContact(payload: Payload) {
     slug: "contact",
     data: {
       email: faker.internet.email(),
-      phone: faker.phone.number(),
-      address: faker.location.streetAddress(true),
     },
   });
 

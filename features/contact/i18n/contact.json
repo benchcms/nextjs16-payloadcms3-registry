@@ -7,14 +7,6 @@
     "email": {
       "en": "Email",
       "fr": "Email"
-    },
-    "phone": {
-      "en": "Phone Number",
-      "fr": "Numéro de téléphone"
-    },
-    "address": {
-      "en": "Address",
-      "fr": "Adresse"
     }
   }
 }

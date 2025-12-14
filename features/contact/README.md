@@ -2,11 +2,11 @@
 
 ## Overview
 
-The Contact feature manages the business's contact information and contact form submissions. It provides a query to retrieve global contact data and a factory function to create a server action for contact form submissions.
+The Contact feature provides contact form functionality. It includes a factory function to create a server action for contact form submissions and configuration for the form recipient email.
 
 ## Types
 
-- **`Contact`**: Global contact information (email, phone, address).
+- **`Contact`**: Contact form recipient configuration.
 
 ## Queries
 
@@ -63,16 +63,20 @@ The server-side function (`submitContactForm`) handles:
 
 ### Pages / Sections
 
-**View**: Contact Page
+**View**: Contact Form
 
-- **Purpose**: Display contact information and contact form
-- **Placement**: Dedicated page.
-- **Data Source**: `getContact()` and `createContactFormAction()`
+- **Purpose**: Display contact form for user submissions
+- **Placement**: Dedicated page or section.
+- **Data Source**: `createContactFormAction()`
 
 ## Data Display Guidelines
 
-### Contact (`Contact`)
+### Contact Form Fields
 
-- **`email`** (email): Contact email.
-- **`phone`** (text): Contact phone.
-- **`address`** (textarea): Physical address.
+The contact form accepts the following fields (validated by `contactFormSchema`):
+
+- **`name`** (string): User's name (required, 1-100 characters).
+- **`email`** (email): User's email address (required).
+- **`phone`** (string): User's phone number (optional).
+- **`subject`** (string): Message subject (required, 1-200 characters).
+- **`message`** (string): Message content (required, 1-5000 characters).

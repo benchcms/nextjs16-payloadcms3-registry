@@ -13,15 +13,5 @@ export const Contact: GlobalConfig = {
       type: "email",
       label: i18n.fields.email,
     },
-    {
-      name: "phone",
-      type: "text",
-      label: i18n.fields.phone,
-    },
-    {
-      name: "address",
-      type: "textarea",
-      label: i18n.fields.address,
-    },
   ],
 };
