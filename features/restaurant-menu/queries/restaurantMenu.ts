@@ -1,0 +1,43 @@
+"use server";
+
+import { getPayloadClient } from "@core/utils/payload";
+import type { RestaurantMenu } from "../types";
+
+// PUBLIC API
+
+/**
+ * Get all menu categories with their dishes
+ */
+export async function getMenuSections(): Promise<RestaurantMenu[]> {
+  const payload = await getPayloadClient();
+
+  const { docs } = await payload.find({
+    collection: "restaurant-menu",
+    sort: "order",
+    depth: 2,
+  });
+
+  return docs as RestaurantMenu[];
+}
+
+/**
+ * Get a single menu category by slug
+ */
+export async function getMenuSection(
+  slug: string,
+): Promise<RestaurantMenu | null> {
+  const payload = await getPayloadClient();
+
+  const { docs } = await payload.find({
+    collection: "restaurant-menu",
+    where: {
+      slug: {
+        equals: slug,
+      },
+    },
+    limit: 1,
+    depth: 2,
+  });
+
+  return (docs[0] as RestaurantMenu) || null;
+}
