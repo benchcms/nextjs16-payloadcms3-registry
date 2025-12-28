@@ -10,7 +10,7 @@ The Catalog feature manages a hierarchical catalog system. Categories form a tre
 - **`CatalogCategory`**: Catalog category with name, description, image, and parent category.
 - **`Specification`**: Name-value pair for item specifications.
 
-## Queries (Read Operations)
+## Queries
 
 ### `getCatalogItems(options?): Promise<PaginatedDocs<CatalogItem>>`
 
@@ -75,20 +75,25 @@ Get a single catalog category by slug.
 ### Catalog Item (`CatalogItem`)
 
 - **`name`** (string): Item name.
-- **`gallery`** (upload/Media[]): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
-- **`price`** (number): Price.
-- **`description`** (richText): Item description.
-- **`categories`** (relationship[]): Associated categories.
-- **`specifications`** (array): List of specs. Each item has `name` and `value` fields.
-- **`relatedItems`** (relationship[]): Related catalog items.
+- **`categories`** (CatalogCategory[]): Associated categories.
+- **`price`** (number, optional): Price.
+- **`gallery`** (Media[]): Array of product images.
+- **`description`** (RichText, optional): Item description.
+- **`specifications`** (Specification[]): List of specs.
+- **`relatedItems`** (CatalogItem[]): Related catalog items.
 - **`slug`** (string): URL slug.
-- **`order`** (number): Sort order.
+- **`order`** (number): Display order.
 
 ### Catalog Category (`CatalogCategory`)
 
 - **`name`** (string): Category name.
-- **`description`** (textarea): Category description.
-- **`image`** (upload/Media): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
-- **`parent`** (relationship): Parent category. Use this to build breadcrumb navigation by traversing up the hierarchy.
+- **`parent`** (CatalogCategory, optional): Parent category for hierarchical navigation.
+- **`description`** (string, optional): Category description.
+- **`image`** (Media, optional): Category image.
 - **`slug`** (string): URL slug.
-- **`order`** (number): Sort order.
+- **`order`** (number): Display order.
+
+### Specification (`Specification`)
+
+- **`name`** (string): Specification name.
+- **`value`** (string): Specification value.

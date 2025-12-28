@@ -8,7 +8,7 @@ The Testimonials feature manages client reviews and feedback.
 
 - **`Testimonial`**: Client testimonial with quote, client name, company, rating, photo, and date.
 
-## Queries (Read Operations)
+## Queries
 
 ### `getTestimonials(options?): Promise<PaginatedDocs<Testimonial>>`
 
@@ -33,9 +33,9 @@ Get all testimonials with pagination.
 
 ### Testimonial (`Testimonial`)
 
-- **`quote`** (textarea): The review text.
+- **`quote`** (string): The review text.
 - **`client`** (string): Client name.
-- **`company`** (string): Company name (optional).
-- **`rating`** (number): Rating 1-5 (optional).
-- **`photo`** (upload/Media): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
-- **`date`** (date): Date of testimonial.
+- **`company`** (string, optional): Company name.
+- **`rating`** (number, optional): Rating 1-5.
+- **`photo`** (Media, optional): Client photo.
+- **`date`** (string): Date of testimonial.

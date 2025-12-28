@@ -10,7 +10,7 @@ The Restaurant Menu feature manages menu categories (e.g., "Starters", "Main Cou
 - **`MenuItem`**: Individual dish with name, description, price, image, dietary info, and spicy level.
 - **`SpicyLevel`**: Type alias for spicy level options ("none" | "mild" | "medium" | "hot" | "extra-hot").
 
-## Queries (Read Operations)
+## Queries
 
 ### `getMenuSections(): Promise<RestaurantMenu[]>`
 
@@ -48,15 +48,15 @@ Get a single menu category by its slug.
 ### Menu Category (`RestaurantMenu`)
 
 - **`name`** (string): Category title.
-- **`items`** (array): List of dishes.
-- **`order`** (number): Sort order.
+- **`items`** (MenuItem[]): List of dishes.
 - **`slug`** (string): URL slug.
+- **`order`** (number): Display order.
 
 ### Menu Item (`MenuItem`)
 
 - **`name`** (string): Dish name.
-- **`description`** (textarea): Dish description.
-- **`price`** (number): Price.
-- **`image`** (upload/Media): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
-- **`dietary`** (text): Dietary info (optional).
-- **`spicyLevel`** (select): Spicy level (optional).
+- **`description`** (string, optional): Dish description.
+- **`price`** (number, optional): Price.
+- **`image`** (Media, optional): Dish image.
+- **`dietary`** (string, optional): Dietary info.
+- **`spicyLevel`** (SpicyLevel, optional): Spicy level.

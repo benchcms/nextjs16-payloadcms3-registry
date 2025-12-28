@@ -11,7 +11,7 @@ The Blog feature manages blog posts, categories, and authors. It allows displayi
 - **`BlogCategory`**: Blog category with name, description, and image.
 - **`BlogTag`**: Tag for blog posts.
 
-## Queries (Read Operations)
+## Queries
 
 ### `getBlogPosts(options?): Promise<PaginatedDocs<BlogPost>>`
 
@@ -86,23 +86,33 @@ Get blog posts for a specific category.
 ### Blog Post (`BlogPost`)
 
 - **`title`** (string): Main heading.
-- **`image`** (upload/Media): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
-- **`excerpt`** (textarea): Short summary.
-- **`content`** (richText): Article body.
-- **`publishedDate`** (date): Publication date.
-- **`author`** (relationship): Author reference.
-- **`category`** (relationship): Category reference.
-- **`tags`** (array): List of tags. Each item has a `tag` field (string).
-- **`metaTitle`** (text): SEO title.
-- **`metaDescription`** (textarea): SEO description.
+- **`image`** (Media, optional): Featured image.
+- **`excerpt`** (string, optional): Short summary.
+- **`content`** (RichText): Article body.
+- **`publishedDate`** (string): Publication date.
+- **`author`** (BlogAuthor): Author reference.
+- **`category`** (BlogCategory): Category reference.
+- **`tags`** (BlogTag[]): List of tags.
+- **`metaTitle`** (string, optional): SEO title.
+- **`metaDescription`** (string, optional): SEO description.
 - **`slug`** (string): URL slug.
 
 ### Blog Author (`BlogAuthor`)
 
 - **`name`** (string): Author name.
-- **`photo`** (upload/Media): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
+- **`description`** (string, optional): Author bio.
+- **`photo`** (Media, optional): Author profile photo.
+- **`slug`** (string): URL slug.
+- **`order`** (number): Display order.
 
 ### Blog Category (`BlogCategory`)
 
 - **`name`** (string): Category name.
-- **`image`** (upload/Media): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
+- **`description`** (string, optional): Category description.
+- **`image`** (Media, optional): Category image.
+- **`slug`** (string): URL slug.
+- **`order`** (number): Display order.
+
+### Blog Tag (`BlogTag`)
+
+- **`tag`** (string): Tag name.

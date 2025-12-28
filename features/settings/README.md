@@ -18,9 +18,9 @@ Get the global settings configuration.
 
 ### `GoogleAnalytics`
 
-Server Component that renders Google Analytics tracking scripts. Returns `null` if `googleAnalyticsId` is not configured.
+Server Component that renders Google Analytics tracking scripts.
 
-**Usage**: Add `<GoogleAnalytics />` to your root layout.
+**Usage**: Add to root layout.
 
 ## UI Components to Create
 
@@ -36,11 +36,11 @@ Server Component that renders Google Analytics tracking scripts. Returns `null` 
 
 ### Settings (`Settings`)
 
-- **`email`** (email): Contact email (optional).
-- **`phone`** (text): Contact phone (optional).
-- **`address`** (textarea): Physical address (optional).
-- **`facebook`** (text): Facebook URL (optional).
-- **`instagram`** (text): Instagram URL (optional).
-- **`linkedin`** (text): LinkedIn URL (optional).
-- **`twitter`** (text): Twitter URL (optional).
-- **`googleAnalyticsId`** (text): Google Analytics ID (optional).
+- **`email`** (string, optional): Contact email.
+- **`phone`** (string, optional): Contact phone.
+- **`address`** (string, optional): Physical address.
+- **`facebook`** (string, optional): Facebook URL.
+- **`instagram`** (string, optional): Instagram URL.
+- **`linkedin`** (string, optional): LinkedIn URL.
+- **`twitter`** (string, optional): Twitter URL.
+- **`googleAnalyticsId`** (string, optional): Google Analytics ID.

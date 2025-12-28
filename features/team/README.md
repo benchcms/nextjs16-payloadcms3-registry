@@ -9,7 +9,7 @@ The Team feature manages groups of team members (e.g., "Management", "Kitchen St
 - **`Team`**: A team group with name, slug, order, and a list of members.
 - **`TeamMember`**: Individual team member with name, role, photo, bio, and social links.
 
-## Queries (Read Operations)
+## Queries
 
 ### `getTeamSections(): Promise<Team[]>`
 
@@ -47,19 +47,19 @@ Get a single team group by its slug.
 ### Team Group (`Team`)
 
 - **`name`** (string): Group title.
-- **`items`** (array): List of members.
-- **`order`** (number): Sort order.
+- **`items`** (TeamMember[]): List of team members.
 - **`slug`** (string): URL slug.
+- **`order`** (number): Display order.
 
 ### Team Member (`TeamMember`)
 
 - **`name`** (string): Member's full name.
 - **`role`** (string): Job title.
-- **`photo`** (upload/Media): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
-- **`bio`** (textarea): Short biography (optional).
-- **`email`** (email): Contact email (optional).
-- **`phone`** (text): Contact phone (optional).
-- **`linkedin`** (text): LinkedIn URL (optional).
-- **`twitter`** (text): Twitter URL (optional).
-- **`facebook`** (text): Facebook URL (optional).
-- **`instagram`** (text): Instagram URL (optional).
+- **`bio`** (string, optional): Short biography.
+- **`photo`** (Media, optional): Team member photo.
+- **`email`** (string, optional): Contact email.
+- **`phone`** (string, optional): Contact phone.
+- **`linkedin`** (string, optional): LinkedIn URL.
+- **`twitter`** (string, optional): Twitter URL.
+- **`facebook`** (string, optional): Facebook URL.
+- **`instagram`** (string, optional): Instagram URL.

@@ -9,7 +9,7 @@ The FAQ (Frequently Asked Questions) feature manages groups of questions and ans
 - **`Faq`**: A FAQ group with name, slug, order, and a list of items.
 - **`FaqItem`**: Individual Q&A pair with question and answer (richText).
 
-## Queries (Read Operations)
+## Queries
 
 ### `getFAQSections(): Promise<Faq[]>`
 
@@ -47,11 +47,11 @@ Get a single FAQ group by its slug.
 ### FAQ Group (`Faq`)
 
 - **`name`** (string): Group title.
-- **`items`** (array): List of Q&A pairs.
-- **`order`** (number): Sort order.
+- **`items`** (FaqItem[]): List of Q&A pairs.
 - **`slug`** (string): URL slug.
+- **`order`** (number): Display order.
 
 ### FAQ Item (`FaqItem`)
 
 - **`question`** (string): Question text.
-- **`answer`** (richText): Answer content.
+- **`answer`** (RichText): Answer content.

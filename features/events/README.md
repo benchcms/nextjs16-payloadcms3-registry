@@ -8,7 +8,7 @@ The Events feature manages upcoming events, workshops, or gatherings. It allows 
 
 - **`Event`**: Event with title, date, location, image, description, and registration links.
 
-## Queries (Read Operations)
+## Queries
 
 ### `getUpcomingEvents(options?): Promise<Event[]>`
 
@@ -58,11 +58,11 @@ Get a single event by its slug.
 ### Event (`Event`)
 
 - **`title`** (string): Event title.
-- **`date`** (string/date): Event start date.
-- **`endDate`** (string/date): Event end date (optional).
+- **`description`** (RichText): Event description.
 - **`location`** (string): Event location.
-- **`image`** (upload/Media): **CRITICAL**. MUST be displayed using Next.js `<Image>`. Check for existence and use `url`.
-- **`description`** (richText): Event description.
-- **`registrationLink`** (string): Registration URL (optional).
-- **`virtualLink`** (string): Virtual event URL (optional).
+- **`image`** (Media, optional): Event featured image.
+- **`date`** (string): Event start date.
+- **`endDate`** (string, optional): Event end date.
+- **`virtualLink`** (string, optional): Virtual event URL.
+- **`registrationLink`** (string, optional): Registration URL.
 - **`slug`** (string): URL slug.

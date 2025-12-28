@@ -8,7 +8,7 @@ The Job Offers feature manages job listings. It allows displaying a list of acti
 
 - **`JobOffer`**: Job listing with title, description, requirements, location, salary, and application link.
 
-## Queries (Read Operations)
+## Queries
 
 ### `getActiveJobOffers(options?): Promise<PaginatedDocs<JobOffer>>`
 
@@ -56,10 +56,10 @@ Get a single job offer by slug.
 ### Job Offer (`JobOffer`)
 
 - **`title`** (string): Job title.
-- **`description`** (richText): Full job description.
-- **`requirements`** (richText): Job requirements.
+- **`description`** (RichText): Full job description.
+- **`requirements`** (RichText): Job requirements.
 - **`location`** (string): Job location.
-- **`applicationLink`** (string): External application URL (optional).
-- **`active`** (checkbox): Status of the offer.
-- **`postedDate`** (date): Date posted.
+- **`applicationLink`** (string, optional): External application URL.
+- **`active`** (boolean): Status of the offer.
+- **`postedDate`** (string): Date posted.
 - **`slug`** (string): URL slug.

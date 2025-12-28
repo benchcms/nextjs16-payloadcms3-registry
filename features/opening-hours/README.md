@@ -9,7 +9,7 @@ The Opening Hours feature manages the business operating hours for each day of t
 - **`OpeningHours`**: Weekly opening hours schedule with start date for scheduling.
 - **`DaySchedule`**: Individual day schedule with open/close times and isOpen flag.
 
-## Queries (Read Operations)
+## Queries
 
 ### `getOpeningHours(): Promise<OpeningHours | null>`
 
@@ -34,5 +34,5 @@ Get the currently active opening hours based on the current date. Returns the en
 ### Day Schedule (`DaySchedule`)
 
 - **`isOpen`** (boolean): Whether open on this day.
-- **`open`** (string): Opening time.
-- **`close`** (string): Closing time.
+- **`open`** (string, optional): Opening time.
+- **`close`** (string, optional): Closing time.

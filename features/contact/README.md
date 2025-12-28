@@ -75,8 +75,8 @@ The server-side function (`submitContactForm`) handles:
 
 The contact form accepts the following fields (validated by `contactFormSchema`):
 
-- **`name`** (string): User's name (required, 1-100 characters).
-- **`email`** (email): User's email address (required).
-- **`phone`** (string): User's phone number (optional).
-- **`subject`** (string): Message subject (required, 1-200 characters).
-- **`message`** (string): Message content (required, 1-5000 characters).
+- **`name`** (string): User's name.
+- **`email`** (string): User's email address.
+- **`phone`** (string, optional): User's phone number.
+- **`subject`** (string): Message subject.
+- **`message`** (string): Message content.

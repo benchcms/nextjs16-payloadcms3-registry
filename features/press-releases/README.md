@@ -8,7 +8,7 @@ The Press Releases feature manages company news and announcements.
 
 - **`PressRelease`**: News/announcement with title, journal, excerpt, link, and published date.
 
-## Queries (Read Operations)
+## Queries
 
 ### `getPressReleases(options?): Promise<PaginatedDocs<PressRelease>>`
 
@@ -47,8 +47,8 @@ Get a single press release by slug.
 ### Press Release (`PressRelease`)
 
 - **`title`** (string): Headline.
-- **`journal`** (text): Publication name (optional).
-- **`excerpt`** (richText): Short summary (optional).
-- **`link`** (text): URL to original article (optional).
-- **`publishedDate`** (date): Publication date.
+- **`journal`** (string, optional): Publication name.
+- **`excerpt`** (RichText, optional): Short summary.
+- **`link`** (string, optional): URL to original article.
+- **`publishedDate`** (string): Publication date.
 - **`slug`** (string): URL slug.
